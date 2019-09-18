@@ -1,8 +1,8 @@
-# quill-better-table
-A module for better table in Quill, more useful features are supported. There is a list of features below. Thanks [quilljs](https://quilljs.com/) for its awesome extensibility. Hope that quill-better-table could help you.
+# quill-easy-table
+A module for easy table in Quill, more useful features are supported. There is a list of features below. Thanks [quilljs](https://quilljs.com/) for its awesome extensibility. Hope that quill-easy-table could help you.
 
 # Online Demo
-[quill-better-table Codepen Demo](https://codepen.io/soccerloway/pen/WWJowj)
+[quill-easy-table Codepen Demo](https://codepen.io/soccerloway/pen/WWJowj)
 
 # Updated
 <ul>
@@ -13,7 +13,7 @@ A module for better table in Quill, more useful features are supported. There is
     <p>Add 2 dots to make selected areas easier to recognize.</p>
   </li>
   <li>
-    <p>Add support for background color in table cells and relatived configures.(Mentioned in [issue 8](https://github.com/soccerloway/quill-better-table/issues/8))</p>
+    <p>Add support for background color in table cells and relatived configures.(Mentioned in [issue 8](https://github.com/soccerloway/quill-easy-table/issues/8))</p>
   </li>
 </ul>
 
@@ -66,7 +66,7 @@ Since I use webpack externals to bundle, you must expose `Quill` to window objec
 
 # Installation
 ```
-npm install quill-better-table
+npm install quill-easy-table
 ```
 
 # Usage
@@ -76,15 +76,15 @@ Load quill and style dependencies
 ```
 ```
 <link href="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.0-dev.3/quill.snow.min.css" rel="stylesheet">
-<link href="unpkg.com/quill-better-table@1.1.9/dist/quill-better-table.css" rel="stylesheet">
+<link href="unpkg.com/quill-easy-table@1.1.9/dist/quill-easy-table.css" rel="stylesheet">
 ```
 
 ES6
 ```
-import QuillBetterTable from 'quill-better-table'
+import QuillEasyTable from 'quill-easy-table'
 
 Quill.register({
-  'modules/better-table': QuillBetterTable
+  'modules/easy-table': QuillEasyTable
 }, true)
 
 window.onload = () => {
@@ -92,7 +92,7 @@ window.onload = () => {
     theme: 'snow',
     modules: {
       table: false,  // disable table module
-      'better-table': {
+      'easy-table': {
         operationMenu: {
           items: {
             unmergeCells: {
@@ -102,23 +102,23 @@ window.onload = () => {
         }
       },
       keyboard: {
-        bindings: QuillBetterTable.keyboardBindings
+        bindings: QuillEasyTable.keyboardBindings
       }
     }
   })
 
   document.body.querySelector('#insert-table')
     .onclick = () => {
-      let tableModule = quill.getModule('better-table')
+      let tableModule = quill.getModule('easy-table')
       tableModule.insertTable(3, 3)
     }
 }
 ```
 
 # Module methods
-first, you can get quill-better-table module by `quill.getModule`
+first, you can get quill-easy-table module by `quill.getModule`
 ```
-let module = quill.getModule('better-table')
+let module = quill.getModule('easy-table')
 ```
 ## module.getTable(range = quill.getSelection())
 get an array with TableContainer, TableRow, TableCell, offset through the given range.
@@ -135,13 +135,13 @@ module.insertTable(3, 3)
 ```
 
 # Module Options
-quill-better-table only provide operation options now.
+quill-easy-table only provide operation options now.
 ```
 const quill = new Quill('#editor', {
   theme: 'snow',
   modules: {
     table: false,  // disable table module
-    'better-table': {
+    'easy-table': {
       operationMenu: {
         items: {
           unmergeCells: {
@@ -155,7 +155,7 @@ const quill = new Quill('#editor', {
       }
     },
     keyboard: {
-      bindings: QuillBetterTable.keyboardBindings
+      bindings: QuillEasyTable.keyboardBindings
     }
   }
 })
@@ -199,7 +199,7 @@ Background colors is optional, the default is hidden. If you need this feature, 
 ```
 
 # Community
-Send me an email(<a href="mailto: lw54760187@hotmail.com">lw54760187@hotmail.com</a>) or Contribute on [Issues](https://github.com/soccerloway/quill-better-table/issues), I glad to hear your suggestion.
+Send me an email(<a href="mailto: lw54760187@hotmail.com">lw54760187@hotmail.com</a>) or Contribute on [Issues](https://github.com/soccerloway/quill-easy-table/issues), I glad to hear your suggestion.
 
 # License
 [MIT License](https://rmm5t.mit-license.org/)

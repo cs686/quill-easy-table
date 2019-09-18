@@ -533,7 +533,7 @@ class TableContainer extends Container {
 
   tableDestroy() {
     const quill = Quill.find(this.scroll.domNode.parentNode)
-    const tableModule = quill.getModule("better-table")
+    const tableModule = quill.getModule("easy-table")
     this.remove()
     tableModule.hideTableTools()
     quill.update(Quill.sources.USER)
@@ -836,7 +836,7 @@ class TableContainer extends Container {
   }
 }
 TableContainer.blotName = "table-container"
-TableContainer.className = "quill-better-table"
+TableContainer.className = "quill-easy-table"
 TableContainer.tagName = "TABLE"
 
 class TableViewWrapper extends Container {
@@ -844,7 +844,7 @@ class TableViewWrapper extends Container {
     super(scroll, domNode)
     const quill = Quill.find(scroll.domNode.parentNode)
     domNode.addEventListener('scroll', (e) => {
-      const tableModule = quill.getModule('better-table')
+      const tableModule = quill.getModule('easy-table')
       if (tableModule.columnTool) {
         tableModule.columnTool.domNode.scrollLeft = e.target.scrollLeft
       }
@@ -857,7 +857,7 @@ class TableViewWrapper extends Container {
   }
 }
 TableViewWrapper.blotName = "table-view"
-TableViewWrapper.className = "quill-better-table-wrapper"
+TableViewWrapper.className = "quill-easy-table-wrapper"
 TableViewWrapper.tagName = "DIV"
 
 TableViewWrapper.allowedChildren = [TableContainer]
