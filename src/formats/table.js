@@ -249,6 +249,7 @@ class TableCell extends Container {
   }
 }
 TableCell.blotName = "table"
+TableCell.className = "easy-body-td"
 TableCell.tagName = "TD"
 
 class TableRow extends Container {

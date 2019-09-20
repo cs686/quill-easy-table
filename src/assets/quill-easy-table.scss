@@ -33,14 +33,42 @@ $primaryColor: #0589f3;
   overflow-x: auto;
 }
 
-table {
-  table-layout: fixed;
-  border-collapse: collapse;
+// table {
+//   table-layout: fixed;
+//   border-collapse: separate;
+//   td {
+//     border: 1px solid #000;
+//     padding: 2px 5px;
+//   }
+// }
 
-  td {
-    border: 1px solid #000;
-    padding: 2px 5px;
+.quill-easy-table{
+  border-collapse: collapse !important;
+  border-spacing:2px !important;
+  border-color: grey !important;
+  tr {
+    background-color: #fff !important;
+    td {
+      border: 1px solid #c1c7d0 !important;
+      padding: 10px 0 !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+      text-overflow: ellipsis !important;
+      vertical-align: middle !important;
+      position: relative !important;
+      text-align: left !important;
+    }
   }
+}
+
+.easy-body-td div {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-all;
+  line-height: 23px;
+  padding-left: 10px;
 }
 
 .qlbt-operation-menu {

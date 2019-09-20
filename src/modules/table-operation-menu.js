@@ -20,7 +20,7 @@ const DEFAULT_COLOR_SUBTITLE = 'Background Colors'
 
 const MENU_ITEMS_DEFAULT = {
   insertColumnRight: {
-    text: '插入右边',
+    text: 'Insert column right',
     iconSrc: operationIcon1,
     handler () {
       const tableContainer = Quill.find(this.table)
@@ -54,7 +54,7 @@ const MENU_ITEMS_DEFAULT = {
   },
 
   insertColumnLeft: {
-    text: '插入左边',
+    text: 'Insert column left',
     iconSrc: operationIcon2,
     handler () {
       const tableContainer = Quill.find(this.table)
