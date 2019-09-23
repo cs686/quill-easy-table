@@ -197,9 +197,9 @@ Background colors is optional, the default is hidden. If you need this feature, 
   text: 'Background Colors'  // subtitle, 'Background Colors' as default
 } 
 ```
-
+<!-- 
 # Community
-Send me an email(<a href="mailto: lw54760187@hotmail.com">lw54760187@hotmail.com</a>) or Contribute on [Issues](https://github.com/soccerloway/quill-easy-table/issues), I glad to hear your suggestion.
+Send me an email(<a href="mailto: lw54760187@hotmail.com">lw54760187@hotmail.com</a>) or Contribute on [Issues](https://github.com/soccerloway/quill-easy-table/issues), I glad to hear your suggestion. -->
 
 # License
 [MIT License](https://rmm5t.mit-license.org/)
