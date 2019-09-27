@@ -178,7 +178,7 @@ class EasyTable extends Module {
     if (range == null) return
     let currentBlot = this.quill.getLeaf(range.index)[0]
     let nextBlot = this.quill.getLeaf(range.index + 1)[0]
-    let delta = new Delta().retain(range.index)
+    let delta = new Delta()
 
     delta.insert('\n')
     // insert table column
